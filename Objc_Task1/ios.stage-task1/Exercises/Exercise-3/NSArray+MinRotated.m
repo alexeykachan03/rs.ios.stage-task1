@@ -7,9 +7,9 @@
 	if(right - left == 1) {
 		if(rightvalue > leftvalue) {
 			return [self objectAtIndex:left];
-		} else {
-			return [self objectAtIndex:right];
-		}
+			} else {
+				return [self objectAtIndex:right];
+				}
 	}
 	NSInteger center = (left + right)/2;
     NSInteger centervalue = [[self objectAtIndex:center] integerValue];
