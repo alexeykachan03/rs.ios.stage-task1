@@ -12,12 +12,12 @@
         playerArray:(NSArray <NSNumber *> *)playerArray {
     
 	NSMutableArray *result = [[NSMutableArray alloc] initWithCapacity:[playerArray count]];
-	long cnt = [playerArray count];
-    NSNumber *place;
+		long cnt = [playerArray count];
+   			 NSNumber *place;
 	if([rankedArray count] == 0) {
 		for(int i = 0; i < cnt; i++) {
 			[result addObject:@1];
-		}
+						}
         return result;
 	}
     if([playerArray count] == 0) {
@@ -27,7 +27,8 @@
 	for(int i = 0; i <  [playerArray count]; i++) {
         place = [NSNumber numberWithInt:1];
         for(int j = 0; j < [rankedArray count]; j++){
-            if(([[playerArray objectAtIndex:i] intValue] < [[rankedArray objectAtIndex:j] intValue]) && j != 0 && 
+            if(([[playerArray objectAtIndex:i] intValue] < [[rankedArray objectAtIndex:j] intValue]) && 
+	       j != 0 && 
                ([[rankedArray objectAtIndex:j] intValue] == [[rankedArray objectAtIndex:(j-1)] intValue])){
                 continue;
             }
